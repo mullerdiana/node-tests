@@ -6,3 +6,10 @@ test('Deve retornar a soma das horas extras', () => {
 
   expect(retornado).toBe(esperado);
 });
+
+test('Deve descontar o valor do salario', () => {
+  const esperado = 2300;
+  const retornado = calculaDescontos(2500, 200);
+
+  expect(retornado).toBe(esperado);
+});
