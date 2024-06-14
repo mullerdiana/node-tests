@@ -23,3 +23,26 @@ npx eslint index.js
 ## instalar extensão ESLint no VSCode
 ESLint
 v2.4.4
+
+## instalação jest
+npm i --save-exact 
+jest@28.1.0 --save-dev
+
+## rodar jest
+no package.json substituir o valor do elemento scripts
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+por "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+
+e no final do arquivo incluir type
+,
+  "type": "module"
+
+npm run test
+
+## jest busca por
+arquivos dentro da pasta test na raiz do projeto
+ou
+arquivos com .test.js
