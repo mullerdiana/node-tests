@@ -46,3 +46,11 @@ npm run test
 arquivos dentro da pasta test na raiz do projeto
 ou
 arquivos com .test.js
+
+## watch
+"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watch",
+        "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage"
+
+npm run test:watch
+npm run test:coverage
