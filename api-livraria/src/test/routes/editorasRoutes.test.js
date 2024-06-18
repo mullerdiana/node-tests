@@ -48,11 +48,15 @@ describe("GET em /editoras/id", () => {
 });
 
 describe("PUT em /editoras/id", () => {
-  it("Deve alterar o campo nome", async () => {
+  test.each([
+    ["nome", { nome: "Coletivo Scorax" }],
+    ["cidade", { cidade: "SP" }],
+    ["email", { email: "cs@cs.com" }],
+  ])("Deve alterar o campo %s", async (chave, param) => {
     await request(app)
-      .put(`/editoras/${idResposta}`)
-      .send({ nome: "Coletivo Scorax" })
-      .expect(204);
+    .put(`/editoras/${idResposta}`)
+    .send(param)
+    .expect(204);
   });
 });
 
